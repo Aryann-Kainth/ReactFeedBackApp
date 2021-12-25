@@ -1,8 +1,8 @@
 import React from 'react'
 //children automatically displays everything put insde <Card>
-function Card({children}) {
+function Card({children,reverse}) {
     return (
-        <div className='card' >
+        <div className={`card ${reverse&&'reverse'}`} >
      {children}
         </div>
     )

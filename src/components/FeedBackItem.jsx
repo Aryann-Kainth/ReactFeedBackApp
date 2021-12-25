@@ -4,7 +4,7 @@ import Card from './shared/Card'
 function FeedBackItem({item}) {
     
     return (
-     <Card>
+     <Card reverse={false}>
             <div className="num-display">
                 {item.rating}
            </div>
@@ -15,5 +15,7 @@ function FeedBackItem({item}) {
         </Card>
     )
 }
-
+Card.defaultProps={
+    reverse:false
+}
 export default FeedBackItem
