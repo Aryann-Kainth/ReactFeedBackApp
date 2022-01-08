@@ -8,7 +8,7 @@ function FeedBackItem({item}) {
     /*const handleClick=(id)=>{
         console.log(id)
     }*/
-    const {deleteFeedback}=useContext(FeedbackContext)
+    const {deleteFeedback,editFeedback}=useContext(FeedbackContext)
     return (
      <Card reverse={false}>
             <div className="num-display">
@@ -17,7 +17,7 @@ function FeedBackItem({item}) {
            <button className='close' onClick={()=>deleteFeedback(item.id)}>
                <FaTimes color='purple'/>
            </button>
-           <button className='edit' onClick={()=>deleteFeedback(item.id)}>
+           <button className='edit' onClick={()=>editFeedback(item)}>
                <FaEdit color='purple'/>
            </button>
             <div className="text-display">

@@ -1,15 +1,20 @@
 import react from 'react'
 
-import {useState} from 'react'
-function RatingSelect({select}) {
-    const [selected,setSelected]=useState(10)
-    const handleChange=(e)=>{
-       // console.log(e.currentTarget.value);
-        setSelected(+e.currentTarget.value);
-        select(+e.currentTarget.value)
-    }
-    return (
-        <ul className='rating'>
+import { useState, useContext, useEffect } from 'react'
+import FeedbackContext from '../context/FeedbackContext'
+function RatingSelect({ select }) {
+  const [selected, setSelected] = useState(10)
+  const { feedbackEdit } = useContext(FeedbackContext)
+  useEffect(() => {
+setSelected(feedbackEdit.item.rating)
+  }, [feedbackEdit])
+  const handleChange = (e) => {
+    // console.log(e.currentTarget.value);
+    setSelected(+e.currentTarget.value);
+    select(+e.currentTarget.value)
+  }
+  return (
+    <ul className='rating'>
       <li>
         <input
           type='radio'
@@ -124,7 +129,7 @@ function RatingSelect({select}) {
   )
 }
 
-    
+
 
 
 export default RatingSelect
