@@ -66,8 +66,8 @@ function App() {
         <Route exact path='/' element={
           <>
            <FeedbackForm handleAdd={addFeedBack} />
-        <FeedBackStats feedback={feedback} />
-        <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+        <FeedBackStats  />
+        <FeedbackList  handleDelete={deleteFeedback} />
         <AboutIconLink />
           </>
         }>

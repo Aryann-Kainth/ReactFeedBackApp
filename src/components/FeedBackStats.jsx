@@ -1,6 +1,8 @@
 import React from 'react'
-
-function FeedBackStats({feedback}) {
+import {useContext} from 'react'
+import FeedbackContext from '../context/FeedbackContext';
+function FeedBackStats() {
+    const {feedback}=useContext(FeedbackContext)
     let avg=0;
     for(let item of feedback)
     {
