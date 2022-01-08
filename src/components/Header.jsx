@@ -13,7 +13,7 @@ function Header(props) {
     )
 }
 Header.defaultProps={
-    text:"FeedBack UI", //default props
+    text:"Spider-Man No Way Home Reviews", //default props
     bgColor:'rgba(0,0,0,0.4)',
     textColor:'#ff6a95'
 }
